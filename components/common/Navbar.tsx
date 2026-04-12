@@ -11,6 +11,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  function handleDownloadsClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
+    document.getElementById("downloads")?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center px-4 pt-4">
       {/* Floating pill */}
@@ -33,11 +39,13 @@ export default function Navbar() {
         {/* Nav Links — desktop */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => {
+            const isDownloads = link.label === "Downloads";
             const isActive = pathname === link.href;
             return (
               <li key={link.label}>
                 <Link
                   href={link.href}
+                  onClick={isDownloads ? handleDownloadsClick : undefined}
                   className={`text-sm font-medium transition-colors duration-200 ${
                     isActive
                       ? "text-green-700 border-b-2 border-green-600 pb-0.5"
@@ -80,16 +88,19 @@ export default function Navbar() {
           className="mt-2 w-full max-w-5xl bg-white border border-gray-200 rounded-2xl shadow-md py-5 px-6 flex flex-col gap-4 md:hidden"
           style={{ fontFamily: "var(--font-poppins)" }}
         >
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className={`text-sm font-medium ${pathname === link.href ? "text-green-700" : "text-gray-700"}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isDownloads = link.label === "Downloads";
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={isDownloads ? handleDownloadsClick : () => setOpen(false)}
+                className={`text-sm font-medium ${pathname === link.href ? "text-green-700" : "text-gray-700"}`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
             href={ROUTES.CONTACT}
             onClick={() => setOpen(false)}

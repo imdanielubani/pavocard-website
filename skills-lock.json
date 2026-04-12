@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "build-graph": {
+      "source": "tirth8205/code-review-graph",
+      "sourceType": "github",
+      "computedHash": "ae4760f61632866c69df9bdf6ecf54d1444a3e6bea012310e122d9175f3bd813"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "review-delta": {
+      "source": "tirth8205/code-review-graph",
+      "sourceType": "github",
+      "computedHash": "39ccdc23a36b234bcd9d10bcd7dda377cdde04ad6618fda317f7dbdefc2976d4"
+    },
+    "review-pr": {
+      "source": "tirth8205/code-review-graph",
+      "sourceType": "github",
+      "computedHash": "d7c759b1d1d57e83c48309d3ecefb9ae067388cca6339629b1e6a60c56543d05"
+    }
+  }
+}

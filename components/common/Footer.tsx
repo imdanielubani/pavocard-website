@@ -7,12 +7,12 @@ export default function Footer() {
     <footer className="bg-white pt-[60px] pb-8">
       <div className="max-w-[1240px] mx-auto px-6">
 
-        {/* Top row */}
+        
         <div
           className="flex flex-col md:flex-row gap-10 md:gap-0 pb-10"
           style={{ borderBottom: "1px solid rgba(132,132,132,0.15)" }}
         >
-          {/* Brand */}
+          
           <div className="w-full md:w-[300px] flex-shrink-0 flex flex-col gap-8">
             <Link href={ROUTES.HOME} className="block w-fit">
               <Image
@@ -33,9 +33,9 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Link columns */}
+         
           <div className="flex flex-col sm:flex-row gap-10 md:gap-0 md:flex-1 md:pl-[48px]">
-            {/* Quick Links */}
+            
             <div className="flex-1">
               <h3
                 className="text-[#1b1b1b] text-[20px] font-medium leading-[28.8px] tracking-[-0.5px] mb-3"
