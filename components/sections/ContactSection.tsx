@@ -78,14 +78,14 @@ export default function ContactSection() {
 
   return (
     <section className="w-full bg-white pb-[80px] md:pb-[120px]">
-      <div className="max-w-[1280px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
 
         {/* ── Heading ── */}
         <div className="mb-8">
-          <h2 className="font-sans font-medium text-[#1b1b1b] text-[30px] leading-[1.2]">
+          <h2 className="font-sans font-bold text-[#1b1b1b] text-[24px] sm:text-[30px] leading-[1.2]">
             Send Us a Message
           </h2>
-          <p className="mt-2 font-sans text-[#343434] text-[18px] leading-[27px] tracking-[-0.6px] max-w-[491px]">
+          <p className="mt-2 font-sans text-[#343434] text-[15px] sm:text-[18px] leading-[27px] tracking-[-0.6px] max-w-[491px]">
             Have a question or need assistance? Fill out the form below and our
             team will get back to you shortly.
           </p>
@@ -118,7 +118,7 @@ export default function ContactSection() {
               className="w-full lg:w-[50%] flex flex-col gap-4"
             >
               {/* White card */}
-              <div className="relative border-[1.5px] border-[rgba(0,0,0,0.15)] rounded-[16px] overflow-hidden bg-white pl-[33px] pr-[30px] pt-[24px] pb-[40px] flex flex-col gap-5">
+              <div className="relative border-[1.5px] border-[rgba(0,0,0,0.15)] rounded-[16px] overflow-hidden bg-white px-4 sm:pl-[33px] sm:pr-[30px] pt-[24px] pb-[40px] flex flex-col gap-5">
 
                 {/* Full Name — icon at left-[11.5px] top-[10.5px], placeholder at pl-[48.5px] */}
                 <div className="flex flex-col gap-[3px]">
@@ -172,20 +172,20 @@ export default function ContactSection() {
                   </label>
                   <div className="flex gap-2">
 
-                    {/* Country selector w-[82px] h-[48px] */}
+                    {/* Country selector */}
                     <div className="relative shrink-0" ref={dropdownRef}>
                       <button
                         type="button"
                         onClick={() => setDropdownOpen((o) => !o)}
-                        className="flex items-center justify-between w-[82px] h-[48px] px-[9px] bg-white border-[1.5px] border-[rgba(0,0,0,0.15)] rounded-[12px] text-[#272936] font-medium text-[14px] font-sans"
+                        className="flex items-center justify-between w-[76px] sm:w-[82px] h-[48px] px-2 sm:px-[9px] bg-white border-[1.5px] border-[rgba(0,0,0,0.15)] rounded-[12px] text-[#272936] font-medium text-[13px] sm:text-[14px] font-sans"
                       >
-                        <span>{selectedCountry.code}</span>
+                        <span className="truncate">{selectedCountry.code}</span>
                         <Image
                           src="/images/dropdown.png"
                           alt=""
                           width={10}
                           height={10}
-                          className={`shrink-0 transition-transform duration-150 ${
+                          className={`shrink-0 ml-1 transition-transform duration-150 ${
                             dropdownOpen ? "rotate-180" : ""
                           }`}
                         />
@@ -216,14 +216,14 @@ export default function ContactSection() {
                       )}
                     </div>
 
-                    {/* Phone number input — left-[88px] in Figma, placeholder at left-[22.5px] */}
+                    {/* Phone number input */}
                     <input
                       name="phone"
                       type="tel"
                       value={form.phone}
                       onChange={handleChange}
                       placeholder="801 234 5678"
-                      className={`flex-1 h-[48px] rounded-[12px] border-[1.5px] bg-white pl-[22.5px] pr-3 outline-none font-sans text-[15px] text-[#1b1b1b] placeholder:text-[rgba(0,0,0,0.15)] ${
+                      className={`flex-1 min-w-0 h-[48px] rounded-[12px] border-[1.5px] bg-white pl-3 sm:pl-4 pr-3 outline-none font-sans text-[15px] text-[#1b1b1b] placeholder:text-[rgba(0,0,0,0.15)] ${
                         errors.phone ? "border-red-400" : "border-[rgba(0,0,0,0.15)]"
                       }`}
                     />
@@ -283,46 +283,43 @@ export default function ContactSection() {
 
             {/* ════ RIGHT: contact cards (float on top of the green absolute bg) ════ */}
             {/* Mobile: green bg via classes | Desktop: transparent (bg comes from absolute div) */}
-            <div className="mt-6 lg:mt-0 w-full lg:flex-1 bg-[#046f2b] lg:bg-transparent rounded-[16px] lg:rounded-none p-6 lg:p-0 lg:pt-[41px] lg:pb-[32px] lg:px-[25px] flex flex-col gap-[23px]">
+            <div className="mt-6 lg:mt-0 w-full lg:flex-1 bg-[#046f2b] lg:bg-transparent rounded-[16px] lg:rounded-none p-4 sm:p-6 lg:p-0 lg:pt-[41px] lg:pb-[32px] lg:px-[25px] flex flex-col gap-[16px] sm:gap-[23px]">
 
-              {/* Email card — h-[181px], icon at left-[16px] vertically centered, content at ~left-[84px] */}
-              <div className="border-[1.5px] border-[rgba(255,255,255,0.15)] rounded-[16px] min-h-[181px] flex items-center">
-                <div className="shrink-0 ml-[16px] w-[48px] h-[48px] bg-white rounded-full flex items-center justify-center">
-                  <Image src="/images/email.png" alt="" width={24} height={24} />
+              {/* Email card */}
+              <div className="border-[1.5px] border-[rgba(255,255,255,0.15)] rounded-[16px] flex items-start sm:items-center py-4 sm:py-0 sm:min-h-[181px]">
+                <div className="shrink-0 ml-3 sm:ml-[16px] mt-1 sm:mt-0 w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] bg-white rounded-full flex items-center justify-center">
+                  <Image src="/images/email.png" alt="" width={22} height={22} />
                 </div>
-                <div className="ml-5 mr-[16px] py-[19px] flex flex-col gap-[6px]">
-                  <p className="font-sans font-medium text-white text-[20px] leading-[28.8px] tracking-[-0.5px]">
+                <div className="ml-3 sm:ml-5 mr-3 sm:mr-[16px] sm:py-[19px] flex flex-col gap-[6px]">
+                  <p className="font-sans font-medium text-white text-[16px] sm:text-[20px] leading-[1.4] tracking-[-0.5px]">
                     Send us an email
                   </p>
-                  <p className="font-sans text-white text-[16px] leading-[24px] tracking-[-0.4px]">
-                    Email us for general queries, including difficulties and any
-                    other problem.
+                  <p className="font-sans text-white text-[13px] sm:text-[16px] leading-[22px] sm:leading-[24px] tracking-[-0.4px]">
+                    Email us for general queries, including difficulties and any other problem.
                   </p>
-                  <p className="font-sans text-white text-[18px] leading-[24px] tracking-[-0.4px] opacity-80">
+                  <p className="font-sans text-white text-[14px] sm:text-[18px] leading-[24px] tracking-[-0.4px] opacity-80 break-all sm:break-normal">
                     support@pavocard.com
                   </p>
                 </div>
               </div>
 
-              {/* Phone card — h-[181px] */}
-              <div className="border-[1.5px] border-[rgba(255,255,255,0.15)] rounded-[16px] min-h-[181px] flex items-center">
-                <div className="shrink-0 ml-[16px] w-[48px] h-[48px] bg-white rounded-full flex items-center justify-center">
-                  <Image src="/images/phone.png" alt="" width={24} height={24} />
+              {/* Phone card */}
+              <div className="border-[1.5px] border-[rgba(255,255,255,0.15)] rounded-[16px] flex items-start sm:items-center py-4 sm:py-0 sm:min-h-[181px]">
+                <div className="shrink-0 ml-3 sm:ml-[16px] mt-1 sm:mt-0 w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] bg-white rounded-full flex items-center justify-center">
+                  <Image src="/images/phone.png" alt="" width={22} height={22} />
                 </div>
-                <div className="ml-5 mr-[16px] py-[19px] flex flex-col gap-[6px]">
-                  <p className="font-sans font-medium text-white text-[20px] leading-[28.8px] tracking-[-0.5px]">
+                <div className="ml-3 sm:ml-5 mr-3 sm:mr-[16px] sm:py-[19px] flex flex-col gap-[6px]">
+                  <p className="font-sans font-medium text-white text-[16px] sm:text-[20px] leading-[1.4] tracking-[-0.5px]">
                     Our official number
                   </p>
-                  <p className="font-sans text-white text-[16px] leading-[24px] tracking-[-0.4px]">
-                    Call us to speak to a member of our team.
-                    <br />
-                    We are always happy to help.
+                  <p className="font-sans text-white text-[13px] sm:text-[16px] leading-[22px] sm:leading-[24px] tracking-[-0.4px]">
+                    Call us to speak to a member of our team. We are always happy to help.
                   </p>
                   <div className="flex flex-col gap-[5px] opacity-80">
-                    <p className="font-sans text-white text-[18px] leading-[24px] tracking-[-0.4px]">
+                    <p className="font-sans text-white text-[14px] sm:text-[18px] leading-[24px] tracking-[-0.4px]">
                       + (234) 706-606-7425
                     </p>
-                    <p className="font-sans text-white text-[18px] leading-[24px] tracking-[-0.4px]">
+                    <p className="font-sans text-white text-[14px] sm:text-[18px] leading-[24px] tracking-[-0.4px]">
                       + (234) 706-606-7425
                     </p>
                   </div>

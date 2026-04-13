@@ -15,7 +15,7 @@ export default function ContactHero() {
             />
           </span>
         </div>
-        <h1 className="text-[#1b1b1b] font-medium font-sans text-[40px] md:text-[70px] leading-[1.2] md:leading-[84px] tracking-[-2px] md:tracking-[-3.5px] capitalize">
+        <h1 className="text-[#1b1b1b] font-semibold font-sans text-[40px] md:text-[70px] leading-[1.2] md:leading-[84px] tracking-[-2px] md:tracking-[-3.5px] capitalize">
           Contact Information
         </h1>
         <p className="text-[#343434] text-[16px] md:text-[18px] font-sans leading-[27px] tracking-[-0.6px] max-w-[680px]">
