@@ -82,7 +82,7 @@ export default function ContactForm() {
       </Field>
 
       {status === "success" && (
-        <p className="text-sm text-green-700 font-medium">
+        <p className="text-sm text-[#008236] font-medium">
           Message sent! We&apos;ll get back to you shortly.
         </p>
       )}
@@ -127,7 +127,7 @@ function Field({
 function inputClass(hasError: boolean) {
   return [
     "w-full rounded-xl border px-4 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none transition",
-    "focus:ring-2 focus:ring-green-500 focus:border-green-500",
+    "focus:ring-2 focus:ring-[#00c14d] focus:border-[#00c14d]",
     hasError ? "border-red-400 bg-red-50" : "border-gray-200 bg-white",
   ].join(" ");
 }

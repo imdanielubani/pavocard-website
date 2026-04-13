@@ -3,7 +3,7 @@ export default function AboutHero() {
     <section className="w-full bg-white pt-[164px] pb-[80px]">
       <div className="max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-6">
         {/* Badge */}
-        <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#046f2b]">
+        <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] leading-none font-sans">
             About Us
             {/* eslint-disable-next-line @next/next/no-img-element */}

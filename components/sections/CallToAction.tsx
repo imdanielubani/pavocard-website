@@ -10,7 +10,7 @@ export default function CallToAction() {
           Ellipse top: -22px (starts 22px above card top, clipped by overflow-hidden).
           Phone top: 16px, left: 59.3%, container 367×429px.
         */}
-        <div className="relative overflow-hidden rounded-2xl bg-[#046f2b] min-h-[442px]">
+        <div className="relative overflow-hidden rounded-2xl bg-[#008236] min-h-[442px]">
 
           {/* Text + buttons — normal flow, drives card height, z-10 above ellipse */}
           <div className="relative z-10 pt-[80px] pl-[72px] pb-[80px] max-w-[630px]">

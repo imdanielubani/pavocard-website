@@ -48,8 +48,8 @@ export default function Navbar() {
                   onClick={isDownloads ? handleDownloadsClick : undefined}
                   className={`text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? "text-green-700 border-b-2 border-green-600 pb-0.5"
-                      : "text-gray-700 hover:text-green-700"
+                      ? "text-[#008236] border-b-2 border-[#00c14d] pb-0.5"
+                      : "text-gray-700 hover:text-[#008236]"
                   }`}
                 >
                   {link.label}
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Get In Touch / Contact */}
         <Link
           href={ROUTES.CONTACT}
-          className="hidden md:inline-flex items-center rounded-full bg-green-700 text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-green-500 hover:bg-green-800 transition-colors duration-200"
+          className="hidden md:inline-flex items-center rounded-full bg-[#008236] text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-[#00c14d] hover:bg-[#006b2b] transition-colors duration-200"
         >
           Get In Touch
         </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={isDownloads ? handleDownloadsClick : () => setOpen(false)}
-                className={`text-sm font-medium ${pathname === link.href ? "text-green-700" : "text-gray-700"}`}
+                className={`text-sm font-medium ${pathname === link.href ? "text-[#008236]" : "text-gray-700"}`}
               >
                 {link.label}
               </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
           <Link
             href={ROUTES.CONTACT}
             onClick={() => setOpen(false)}
-            className="mt-1 text-center rounded-full bg-green-700 text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-green-500"
+            className="mt-1 text-center rounded-full bg-[#008236] text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-[#00c14d]"
           >
             Get In Touch
           </Link>

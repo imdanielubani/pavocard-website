@@ -43,7 +43,7 @@ function Stars() {
   return (
     <div className="flex items-center gap-1">
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg key={i} width="15" height="15" viewBox="0 0 24 24" fill="#046f2b">
+        <svg key={i} width="15" height="15" viewBox="0 0 24 24" fill="#FFB545">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -62,7 +62,7 @@ function Card({ name, location, quote }: CardProps) {
     <div className="w-[320px] md:w-[380px] flex-shrink-0 bg-white rounded-2xl p-6 flex flex-col gap-4 mx-3">
       <div className="flex items-center gap-3">
         <div className="size-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-          <span className="text-[#046f2b] font-semibold text-[17px] font-sans">
+          <span className="text-[#008236] font-semibold text-[17px] font-sans">
             {name[0]}
           </span>
         </div>
@@ -96,7 +96,7 @@ export default function Testimonials() {
     <section className="w-full bg-[#f8f8f8] py-[80px] overflow-hidden">
       {/* Header */}
       <div className="max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-5 mb-[56px]">
-        <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#046f2b]">
+        <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] leading-none font-sans">
             Testimonial
             {/* eslint-disable-next-line @next/next/no-img-element */}

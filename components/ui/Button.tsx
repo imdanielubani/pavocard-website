@@ -26,9 +26,9 @@ export default function Button({
     "inline-flex items-center justify-center font-semibold rounded-full transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none";
 
   const variants = {
-    primary: "bg-green-700 text-white hover:bg-green-800 ring-2 ring-green-500",
-    outline: "border-2 border-green-700 text-green-700 hover:bg-green-50",
-    ghost: "text-green-700 hover:bg-green-50",
+    primary: "bg-[#008236] text-white hover:bg-[#006b2b] ring-2 ring-[#00c14d]",
+    outline: "border-2 border-[#008236] text-[#008236] hover:bg-green-50",
+    ghost: "text-[#008236] hover:bg-green-50",
   };
 
   const sizes = {

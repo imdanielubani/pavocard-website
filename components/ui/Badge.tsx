@@ -8,7 +8,7 @@ type BadgeProps = {
 
 export default function Badge({ children, variant = "green", className }: BadgeProps) {
   const variants = {
-    green: "bg-green-100 text-green-700",
+    green: "bg-green-100 text-[#008236]",
     gray: "bg-gray-100 text-gray-600",
     blue: "bg-blue-100 text-blue-700",
   };
