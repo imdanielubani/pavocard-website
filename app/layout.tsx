@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Preloader from "@/components/common/Preloader";
@@ -9,6 +9,12 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
   display: "block",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "Pavocard — Sell Gift Cards for Cash in Nigeria & Ghana",

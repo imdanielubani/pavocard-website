@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import Spinner from "@/components/ui/Spinner";
 import { validateContactForm, type ContactFormData, type ContactFormErrors } from "@/lib/validations/contact";
 
-const INITIAL: ContactFormData = { name: "", email: "", subject: "", message: "" };
+const INITIAL: ContactFormData = { name: "", email: "", phone: "", message: "" };
 
 export default function ContactForm() {
   const [form, setForm] = useState<ContactFormData>(INITIAL);
@@ -61,13 +61,13 @@ export default function ContactForm() {
           />
         </Field>
       </div>
-      <Field label="Subject" error={errors.subject}>
+      <Field label="Phone Number" error={errors.phone}>
         <input
-          name="subject"
-          value={form.subject}
+          name="phone"
+          value={form.phone}
           onChange={handleChange}
-          placeholder="How can we help?"
-          className={inputClass(!!errors.subject)}
+          placeholder="+234 800 000 0000"
+          className={inputClass(!!errors.phone)}
         />
       </Field>
       <Field label="Message" error={errors.message}>

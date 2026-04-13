@@ -18,7 +18,10 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center px-4 pt-4">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center px-4"
+      style={{ paddingTop: "max(1rem, env(safe-area-inset-top))" }}
+    >
       {/* Floating pill */}
       <nav
         className="w-full max-w-5xl bg-white border border-gray-200 rounded-full px-6 py-3 flex items-center justify-between shadow-sm"
@@ -62,7 +65,7 @@ export default function Navbar() {
         {/* Get In Touch / Contact */}
         <Link
           href={ROUTES.CONTACT}
-          className="hidden md:inline-flex items-center rounded-full bg-[#008236] text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-[#00c14d] hover:bg-[#006b2b] transition-colors duration-200"
+          className="hidden md:inline-flex items-center rounded-full bg-[#008236] text-white text-sm font-semibold px-6 py-2.5 ring-2 ring-[#00c14d] hover:scale-[1.04] hover:shadow-[0_0_18px_rgba(0,130,54,0.45)] active:scale-[0.97] transition-all duration-200 ease-out"
         >
           Get In Touch
         </Link>

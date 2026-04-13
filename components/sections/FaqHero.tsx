@@ -1,6 +1,6 @@
 export default function FaqHero() {
   return (
-    <section className="w-full bg-white pt-[100px] pb-[60px] md:pt-[164px] md:pb-[80px]">
+    <section className="w-full bg-white pt-[120px] sm:pt-[130px] pb-[60px] md:pt-[164px] md:pb-[80px]">
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-5">
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">

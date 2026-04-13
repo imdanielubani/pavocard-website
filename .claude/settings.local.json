@@ -3,7 +3,9 @@
     "allow": [
       "Bash(node:*)",
       "mcp__plugin_figma_figma__get_screenshot",
-      "mcp__plugin_figma_figma__get_design_context"
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(curl -L \"https://www.figma.com/api/mcp/asset/0efa27e0-42ca-4ae0-8703-86382e8b0f97\" -o \"C:/Users/Imdanielubani/Desktop/WORK FOLDER/All Projects/pavocard-website/public/images/404-robot.png\" --silent)",
+      "Bash(curl -L \"https://www.figma.com/api/mcp/asset/a9dfc201-8d0f-439a-9875-949796deab74\" -o \"C:/Users/Imdanielubani/Desktop/WORK FOLDER/All Projects/pavocard-website/public/images/blog1.png\")"
     ]
   }
 }

@@ -28,7 +28,7 @@ export default function StatsBar() {
         {/* Left — heading + subtext */}
         <div className="md:max-w-[380px] flex flex-col gap-3 flex-shrink-0">
           <h2
-            className="text-black font-semibold text-[48px] md:text-[50px] leading-[55px] font-sans"
+            className="text-black font-semibold text-[32px] sm:text-[40px] md:text-[50px] leading-[1.15] md:leading-[55px] font-sans"
           >
             100K+ users trust Pavocard
           </h2>

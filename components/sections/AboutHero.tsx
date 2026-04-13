@@ -1,6 +1,6 @@
 export default function AboutHero() {
   return (
-    <section className="w-full bg-white pt-[164px] pb-[80px]">
+    <section className="w-full bg-white pt-[120px] sm:pt-[140px] md:pt-[164px] pb-[60px] md:pb-[80px]">
       <div className="max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-6">
         {/* Badge */}
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">

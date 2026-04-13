@@ -7,8 +7,8 @@ export default function WhoWeAre() {
       <section className="w-full bg-white py-[40px]">
         <div className="max-w-[1240px] mx-auto px-6">
           {/* Rounded card — matches Figma: bg-[#f8f8f8] rounded-[30px] h-[334px] */}
-          <div className="bg-[#f8f8f8] rounded-[30px] px-[64px] py-[60px] flex flex-col gap-6">
-            <h2 className="text-black font-semibold text-[50px] leading-normal font-sans">
+          <div className="bg-[#f8f8f8] rounded-[30px] px-6 sm:px-10 md:px-[64px] py-10 md:py-[60px] flex flex-col gap-6">
+            <h2 className="text-black font-semibold text-[32px] sm:text-[40px] md:text-[50px] leading-normal font-sans">
               Who We Are
             </h2>
             <div className="flex flex-col gap-[25px]">

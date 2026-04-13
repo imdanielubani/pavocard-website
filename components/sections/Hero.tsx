@@ -13,24 +13,46 @@ export default function Hero() {
         style={{ zIndex: 0 }}
       />
 
-      {/* Decorative Nigeria flag — Figma: x=174, y=871 */}
+      {/* Decorative Nigeria flag — left edge, lower section */}
       <div
-        className="hidden xl:block absolute z-10"
-        style={{ left: "174px", top: "871px", animation: "float 3s ease-in-out infinite" }}
+        className="absolute z-10"
+        style={{
+          left: "clamp(8px, 2.5vw, 174px)",
+          top: "62%",
+          animation: "float 3s ease-in-out infinite",
+        }}
       >
-        <Image src="/images/Nigeria.png" alt="Nigeria" width={99} height={72} className="rounded-[4px]" />
+        <Image
+          src="/images/Nigeria.png"
+          alt="Nigeria"
+          width={99}
+          height={72}
+          className="rounded-[4px]"
+          style={{ width: "clamp(56px, 8vw, 99px)", height: "auto" }}
+        />
       </div>
 
-      {/* Decorative Ghana flag — Figma: x=1189, y=648 */}
+      {/* Decorative Ghana flag — right edge, mid section */}
       <div
-        className="hidden xl:block absolute z-10"
-        style={{ left: "1189px", top: "648px", animation: "float 3.5s ease-in-out infinite 0.4s" }}
+        className="absolute z-10"
+        style={{
+          right: "clamp(8px, 2.5vw, 91px)",
+          top: "42%",
+          animation: "float 3.5s ease-in-out infinite 0.4s",
+        }}
       >
-        <Image src="/images/Ghana.png" alt="Ghana" width={107} height={78} className="rounded-[4px]" />
+        <Image
+          src="/images/Ghana.png"
+          alt="Ghana"
+          width={107}
+          height={78}
+          className="rounded-[4px]"
+          style={{ width: "clamp(60px, 8.5vw, 107px)", height: "auto" }}
+        />
       </div>
 
       {/* Text content */}
-      <div className="relative z-10 max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-6 pt-[164px] md:pt-[180px]">
+      <div className="relative z-10 max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-6 pt-[120px] sm:pt-[140px] md:pt-[164px] lg:pt-[180px]">
         {/* Badge */}
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
@@ -58,7 +80,7 @@ export default function Hero() {
           {/* Google Play */}
           <a
             href="#downloads"
-            className="inline-flex items-center gap-3.5 bg-[#008236] rounded-full px-5 py-2.5"
+            className="inline-flex items-center gap-3.5 bg-[#008236] rounded-full px-5 py-2.5 hover:scale-[1.04] hover:shadow-[0_0_22px_rgba(0,130,54,0.45)] active:scale-[0.97] transition-all duration-200 ease-out"
             style={{ boxShadow: "0 0 0 2.5px rgba(0,130,54,0.3)" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -72,7 +94,7 @@ export default function Hero() {
           {/* App Store */}
           <a
             href="#downloads"
-            className="inline-flex items-center gap-3.5 border-2 border-[#008236] bg-white rounded-full px-5 py-2.5"
+            className="inline-flex items-center gap-3.5 border-2 border-[#008236] bg-white rounded-full px-5 py-2.5 hover:scale-[1.04] hover:shadow-[0_0_18px_rgba(0,130,54,0.2)] active:scale-[0.97] transition-all duration-200 ease-out"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/apple-logo.png" alt="" width={29} height={29} style={{ objectFit: "contain" }} />
