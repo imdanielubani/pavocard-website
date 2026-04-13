@@ -22,6 +22,7 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
         style={{ zIndex: 0 }}
+        
       />
 
       {/* Decorative Nigeria flag */}
@@ -38,6 +39,7 @@ export default function Hero() {
             alt="Nigeria"
             width={99}
             height={72}
+            priority
             className="rounded-[4px]"
             style={{ width: "clamp(56px, 8vw, 99px)", height: "auto" }}
           />
@@ -58,6 +60,7 @@ export default function Hero() {
             alt="Ghana"
             width={107}
             height={78}
+            priority
             className="rounded-[4px]"
             style={{ width: "clamp(60px, 8.5vw, 107px)", height: "auto" }}
           />
@@ -128,11 +131,12 @@ export default function Hero() {
         transition={{ duration: 0.65, ease, delay: 0.36 }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/phonemockup 1.png"
           alt="Pavocard App Preview"
           width={711}
           height={758}
+          priority
           className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] lg:max-w-[680px] h-auto"
           style={{ animation: "float 4s ease-in-out infinite" }}
         />
