@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ease, viewport } from "@/lib/animations";
+
 const STEPS = [
   {
     step: "Step 1",
@@ -7,7 +12,6 @@ const STEPS = [
     connector: "/images/Vector.png",
     connectorW: 308,
     connectorH: 520,
-    // Figma: absolute in Step-1 div. left=575.59px / 1007px = 57.15%, top=494px / 821px = 60.17%
     connectorLeft: "57.15%",
     connectorTop: "60.17%",
     flip: false,
@@ -22,10 +26,6 @@ const STEPS = [
     connector: "/images/Vector1.png",
     connectorW: 308,
     connectorH: 519,
-    // Figma: connector absolute in Step-2 wrapper (1280px). left=562.8px.
-    // Step-2 content (1007px) starts at 1280-1007=273px from wrapper left.
-    // Offset within our 1007px div: (562.8-273)/1007 = 289.8/1007 = 28.78%
-    // top=479px / 821px (phone height) = 58.34%
     connectorLeft: "28.78%",
     connectorTop: "58.34%",
     flip: true,
@@ -52,24 +52,44 @@ export default function HowItWorks() {
     <section className="w-full bg-white py-[80px] md:py-[120px]">
       <div className="max-w-[1280px] mx-auto px-6">
 
-        {/* Section header */}
-        <div className="flex flex-col items-center text-center gap-5 mb-[80px]">
-          <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
+        {/* Section header — staggered */}
+        <motion.div
+          className="flex flex-col items-center text-center gap-5 mb-[80px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.1 } },
+          }}
+        >
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } } }}
+            className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]"
+          >
             <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
               How It Works
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
             </span>
-          </div>
-          <h2 className="text-[#282828] font-bold font-sans text-[36px] md:text-[50px] leading-[1.24] tracking-[-2.5px]">
-            Get Started in Minutes
-          </h2>
-          <p className="text-[#444] text-[18px] md:text-[20px] font-sans leading-[30px] max-w-[570px]">
-            A simple and seamless process to start trading your gift cards.
-          </p>
-        </div>
+          </motion.div>
 
-        {/* Steps — gap-[64px] matches Figma */}
+          <motion.h2
+            variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } } }}
+            className="text-[#282828] font-bold font-sans text-[36px] md:text-[50px] leading-[1.24] tracking-[-2.5px]"
+          >
+            Get Started in Minutes
+          </motion.h2>
+
+          <motion.p
+            variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } } }}
+            className="text-[#444] text-[18px] md:text-[20px] font-sans leading-[30px] max-w-[570px]"
+          >
+            A simple and seamless process to start trading your gift cards.
+          </motion.p>
+        </motion.div>
+
+        {/* Steps */}
         <div className="flex flex-col gap-16 md:gap-[64px]">
           {STEPS.map((s, idx) => (
             <div
@@ -81,13 +101,14 @@ export default function HowItWorks() {
                 ${s.flip ? "md:flex-row-reverse md:ml-auto" : ""}
               `}
             >
-              {/* Phone figure
-                  Figma: aspect-[616/821], width = 61.2% of 1007px
-                  Phone image is absolute inside, covering the full figure.
-              */}
-              <div
+              {/* Phone — slides in from the phone side */}
+              <motion.div
                 className="relative flex-shrink-0 w-[280px] md:w-[61.2%]"
                 style={{ aspectRatio: "616 / 821" }}
+                initial={{ opacity: 0, x: s.flip ? 30 : -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={viewport}
+                transition={{ duration: 0.6, ease }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -100,15 +121,10 @@ export default function HowItWorks() {
                     animationDelay: s.animDelay,
                   }}
                 />
-              </div>
+              </motion.div>
 
-              {/* Text card
-                  Figma: absolute, top=129px, width=463px (46% of 1007px)
-                  Step 1 & 3: left=543.77px = 54% of 1007px
-                  Step 2:     left=0 (card on left of right-aligned content)
-                  px-[70px] py-[61px], rounded-[20px], shadow
-              */}
-              <div
+              {/* Text card — slides from opposite side + hover lift */}
+              <motion.div
                 className={`
                   flex-shrink-0 w-full max-w-[380px]
                   bg-white rounded-[20px] overflow-hidden
@@ -120,6 +136,15 @@ export default function HowItWorks() {
                   md:absolute md:top-[129px]
                   ${s.flip ? "md:left-0" : "md:left-[54%]"}
                 `}
+                initial={{ opacity: 0, x: s.flip ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={viewport}
+                transition={{ duration: 0.6, ease, delay: 0.1 }}
+                whileHover={{
+                  y: -4,
+                  boxShadow: "0px 16px 40px rgba(0,0,0,0.14)",
+                  transition: { duration: 0.25, ease: "easeOut" },
+                }}
               >
                 <p className="text-[#008236] text-[20px] font-medium font-sans leading-[30px]">
                   {s.step}
@@ -132,15 +157,9 @@ export default function HowItWorks() {
                     {s.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Connector SVG
-                  MUST be a direct child of the step div (relative, 1007px wide)
-                  so that absolute % is relative to the full 1007px content width,
-                  NOT just the phone figure (61.2%).
-                  Step 1: left=575.59/1007=57.15%, top=494/821=60.17%  (Vector.png)
-                  Step 2: left=562.8/1007=55.89%,  top=479/821=58.34%  (Vector1.png)
-              */}
+              {/* Connector SVG */}
               {s.connector && (
                 <div
                   className="hidden md:block absolute pointer-events-none"

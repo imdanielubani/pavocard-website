@@ -1,3 +1,5 @@
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 const TESTIMONIALS = [
   {
     name: "Chinedu Adeleke",
@@ -94,22 +96,28 @@ export default function Testimonials() {
 
   return (
     <section className="w-full bg-[#f8f8f8] py-[80px] overflow-hidden">
-      {/* Header */}
+      {/* Header — staggered scroll reveal */}
       <div className="max-w-[1240px] mx-auto px-6 flex flex-col items-center text-center gap-5 mb-[56px]">
-        <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
-          <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] leading-none font-sans">
-            Testimonial
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
-          </span>
-        </div>
-        <h2 className="text-[#0a0a0a] font-semibold text-[36px] md:text-[48px] leading-[1.15] tracking-[-2px] font-sans">
-          What Our Users Say
-        </h2>
-        <p className="text-[#383838] text-[17px] leading-[26px] max-w-[540px] font-sans">
-          Trusted by thousands of users across Nigeria 🇳🇬 and Ghana 🇬🇭 for
-          fast, secure, and reliable gift card trading.
-        </p>
+        <ScrollReveal>
+          <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
+            <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] leading-none font-sans">
+              Testimonial
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+            </span>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.08}>
+          <h2 className="text-[#0a0a0a] font-semibold text-[36px] md:text-[48px] leading-[1.15] tracking-[-2px] font-sans">
+            What Our Users Say
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal delay={0.16}>
+          <p className="text-[#383838] text-[17px] leading-[26px] max-w-[540px] font-sans">
+            Trusted by thousands of users across Nigeria 🇳🇬 and Ghana 🇬🇭 for
+            fast, secure, and reliable gift card trading.
+          </p>
+        </ScrollReveal>
       </div>
 
       {/* Row 1 — scrolls left */}
