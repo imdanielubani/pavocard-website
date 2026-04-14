@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ease, viewport } from "@/lib/animations";
 
@@ -69,8 +70,7 @@ export default function HowItWorks() {
           >
             <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
               How It Works
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+              <Image src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
             </span>
           </motion.div>
 
@@ -110,11 +110,12 @@ export default function HowItWorks() {
                 viewport={viewport}
                 transition={{ duration: 0.6, ease }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={s.image}
                   alt={s.title}
-                  className="absolute inset-0 w-full h-full object-contain"
+                  fill
+                  className="object-contain"
+                  priority={idx === 0}
                   style={{
                     filter: "drop-shadow(0px 10px 6px rgba(0,0,0,0.3))",
                     animation: "float 4s ease-in-out infinite",
@@ -170,11 +171,11 @@ export default function HowItWorks() {
                     height: `${s.connectorH}px`,
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.connector}
+                  <Image
+                    src={s.connector as string}
                     alt=""
-                    style={{ width: `${s.connectorW}px`, height: `${s.connectorH}px` }}
+                    width={s.connectorW}
+                    height={s.connectorH}
                   />
                 </div>
               )}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ease, viewport } from "@/lib/animations";
 
@@ -141,8 +142,7 @@ export default function HomeFAQ() {
             >
               <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
                 FAQs
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+                <Image src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
               </span>
             </motion.div>
 

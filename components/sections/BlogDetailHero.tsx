@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface BlogDetailHeroProps {
   title: string;
   excerpt: string;
@@ -11,8 +13,7 @@ export default function BlogDetailHero({ title, excerpt }: BlogDetailHeroProps) 
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
             Blog Details
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+            <Image src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
           </span>
         </div>
 

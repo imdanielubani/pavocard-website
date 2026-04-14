@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ContactHero() {
   return (
     <section className="w-full bg-white pt-[120px] sm:pt-[130px] pb-[60px] md:pt-[164px] md:pb-[80px]">
@@ -5,8 +7,7 @@ export default function ContactHero() {
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
             Contact Us
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/star.png"
               alt=""
               width={16}

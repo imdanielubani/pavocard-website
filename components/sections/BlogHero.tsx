@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BlogHero() {
   return (
     <section className="w-full bg-white pt-[120px] sm:pt-[140px] md:pt-[160px] pb-[60px] md:pb-[80px] px-6">
@@ -6,8 +8,7 @@ export default function BlogHero() {
         <div className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
             Blog
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+            <Image src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
           </span>
         </div>
 

@@ -4,10 +4,11 @@ export default function PhoneMockup() {
   return (
     <section className="w-full bg-white overflow-hidden" style={{ height: "clamp(300px, 50vw, 715px)" }}>
       <div className="relative h-full max-w-[1240px] mx-auto px-6">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <Image
           src="/images/Aboutbg.png"
           alt="Pavocard App Preview"
+          width={1240}
+          height={1026}
           priority
           style={{
             position: "absolute",

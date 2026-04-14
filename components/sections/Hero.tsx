@@ -15,14 +15,14 @@ export default function Hero() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
       {/* Background image */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src="/images/bg.png"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+        fill
+        priority
+        className="object-cover pointer-events-none select-none"
         style={{ zIndex: 0 }}
-        
       />
 
       {/* Decorative Nigeria flag */}
@@ -73,8 +73,7 @@ export default function Hero() {
         <motion.div {...fadeUp(0)} className="badge-glow inline-flex items-center px-4 py-[6px] rounded-full bg-[#008236]">
           <span className="inline-flex items-center gap-1.5 text-white font-semibold text-[16px] font-sans leading-none">
             Trusted Payment Platform
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
+            <Image src="/images/star.png" alt="" width={16} height={16} className="inline-block" />
           </span>
         </motion.div>
 
@@ -100,8 +99,7 @@ export default function Hero() {
             className="inline-flex items-center gap-3.5 bg-[#008236] rounded-full px-5 py-2.5 hover:scale-[1.04] hover:shadow-[0_0_22px_rgba(0,130,54,0.45)] active:scale-[0.97] transition-all duration-200 ease-out"
             style={{ boxShadow: "0 0 0 2.5px rgba(0,130,54,0.3)" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/google-play.png" alt="" width={29} height={29} style={{ objectFit: "contain" }} />
+            <Image src="/images/google-play.png" alt="" width={29} height={29} style={{ objectFit: "contain" }} />
             <div className="flex flex-col leading-[19.5px]">
               <span className="text-white text-xs font-normal font-sans">Download on the</span>
               <span className="text-white text-[18px] font-semibold font-sans">Google Play</span>
@@ -113,8 +111,7 @@ export default function Hero() {
             href="#downloads"
             className="inline-flex items-center gap-3.5 border-2 border-[#008236] bg-white rounded-full px-5 py-2.5 hover:scale-[1.04] hover:shadow-[0_0_18px_rgba(0,130,54,0.2)] active:scale-[0.97] transition-all duration-200 ease-out"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/apple-logo.png" alt="" width={29} height={29} style={{ objectFit: "contain" }} />
+            <Image src="/images/apple-logo.png" alt="" width={29} height={29} style={{ objectFit: "contain" }} />
             <div className="flex flex-col leading-[19.5px]">
               <span className="text-[#272936] text-xs font-normal font-sans">Download on the</span>
               <span className="text-[#272936] text-[18px] font-semibold font-sans">App Store</span>
@@ -130,7 +127,6 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.65, ease, delay: 0.36 }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <Image
           src="/images/phonemockup 1.png"
           alt="Pavocard App Preview"
