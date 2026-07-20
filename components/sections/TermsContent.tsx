@@ -1,34 +1,41 @@
 const SECTIONS = [
   {
-    title: "1. Acceptance of Terms",
+    title: "1. Eligibility",
     content: (
       <>
-        <p>
-          By creating an account or using Pavocard, you confirm that you:
-        </p>
+        <p>To use Pavocard, you must:</p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Are at least 18 years old</li>
-          <li>Agree to these Terms &amp; Conditions</li>
-          <li>Will use the platform in accordance with all applicable laws</li>
+          <li>Be at least 18 years of age</li>
+          <li>Have the legal capacity to enter into a binding agreement</li>
+          <li>Provide accurate, complete, and up-to-date information</li>
+          <li>
+            Comply with all applicable laws and regulations in your
+            jurisdiction
+          </li>
         </ul>
         <p className="mt-2">
-          If you do not agree, please do not use our services.
+          We reserve the right to refuse or terminate access if you fail to
+          meet these requirements.
         </p>
       </>
     ),
   },
   {
-    title: "2. Services Provided",
+    title: "2. Our Services",
     content: (
       <>
-        <p>Pavocard provides a platform that allows users to:</p>
+        <p>Pavocard provides a digital platform that enables users to:</p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Sell gift cards</li>
-          <li>Receive payments based on current exchange rates</li>
+          <li>Sell eligible gift cards</li>
+          <li>
+            Receive payments based on the applicable exchange rate at the
+            time of transaction
+          </li>
+          <li>Manage transaction history through their account</li>
         </ul>
         <p className="mt-2">
-          We reserve the right to modify, suspend, or discontinue any part of
-          the service at any time.
+          We reserve the right to modify, suspend, restrict, or discontinue
+          any part of our Services at any time without prior notice.
         </p>
       </>
     ),
@@ -37,49 +44,56 @@ const SECTIONS = [
     title: "3. User Accounts",
     content: (
       <>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
-            You are responsible for maintaining the confidentiality of your
-            account
-          </li>
-          <li>All information provided must be accurate and up to date</li>
-          <li>You are responsible for all activities under your account</li>
+        <p>To access certain features, you must create an account.</p>
+        <p className="mt-2">You agree to:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Keep your login credentials confidential</li>
+          <li>Maintain accurate account information</li>
+          <li>Notify us immediately of any unauthorized use of your account</li>
+          <li>Accept responsibility for all activities carried out through your account</li>
         </ul>
         <p className="mt-2">
-          We may suspend or terminate accounts that violate our policies.
+          Pavocard is not responsible for losses resulting from unauthorized
+          access caused by your failure to protect your account credentials.
         </p>
       </>
     ),
   },
   {
-    title: "4. Transactions",
+    title: "4. Gift Card Transactions",
     content: (
-      <ul className="list-disc pl-6 space-y-1">
-        <li>All gift card transactions are subject to verification</li>
-        <li>Rates may change at any time based on market conditions</li>
-        <li>
-          Payments are processed after successful validation of the gift card
-        </li>
-        <li>
-          Pavocard reserves the right to decline or cancel any transaction
-          deemed suspicious or invalid.
-        </li>
-      </ul>
+      <>
+        <p>All submitted gift cards are subject to review and verification.</p>
+        <p className="mt-2">By submitting a gift card, you confirm that:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>You are the lawful owner of the gift card</li>
+          <li>The gift card was obtained legally</li>
+          <li>The gift card has not previously been redeemed</li>
+          <li>The information you provide is accurate</li>
+        </ul>
+        <p className="mt-2">
+          Pavocard reserves the right to reject, cancel, or reverse any
+          transaction involving suspected fraud, duplicate submissions,
+          invalid gift cards, or violations of these Terms.
+        </p>
+      </>
     ),
   },
   {
-    title: "5. Prohibited Activities",
+    title: "5. Exchange Rates",
     content: (
       <>
-        <p>Users must not:</p>
-        <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Use stolen or unauthorized gift cards</li>
-          <li>Engage in fraudulent or illegal activities</li>
-          <li>Attempt to exploit or manipulate the platform</li>
-          <li>Provide false or misleading information</li>
-        </ul>
+        <p>
+          Gift card exchange rates are determined by market conditions and
+          may change without prior notice.
+        </p>
         <p className="mt-2">
-          Violations may result in account suspension or legal action.
+          The applicable rate is the rate confirmed by Pavocard at the time
+          your transaction is accepted for processing.
+        </p>
+        <p className="mt-2">
+          Displayed rates are estimates and may change before final
+          confirmation.
         </p>
       </>
     ),
@@ -87,85 +101,231 @@ const SECTIONS = [
   {
     title: "6. Payments",
     content: (
-      <ul className="list-disc pl-6 space-y-1">
-        <li>
-          Payments are made based on agreed rates at the time of transaction
-        </li>
-        <li>Processing times may vary depending on verification</li>
-        <li>
-          Pavocard is not responsible for delays caused by external payment
-          providers
-        </li>
-      </ul>
+      <>
+        <p>
+          Payments are processed after successful verification and approval
+          of submitted gift cards.
+        </p>
+        <p className="mt-2">Processing times may vary depending on:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Gift card verification</li>
+          <li>Banking systems</li>
+          <li>Payment providers</li>
+          <li>Public holidays</li>
+          <li>Regulatory checks</li>
+        </ul>
+        <p className="mt-2">
+          Pavocard is not responsible for delays caused by banks, payment
+          processors, internet outages, or other third-party services beyond
+          our control.
+        </p>
+      </>
     ),
   },
   {
-    title: "7. Refund Policy",
-    content: (
-      <ul className="list-disc pl-6 space-y-1">
-        <li>
-          Transactions involving valid and processed gift cards are
-          non-refundable
-        </li>
-        <li>
-          If a transaction fails due to an error on our end, appropriate action
-          will be taken to resolve it
-        </li>
-      </ul>
-    ),
-  },
-  {
-    title: "8. Privacy",
-    content: (
-      <p>
-        Your use of the platform is also governed by our Privacy Policy, which
-        explains how we collect and use your data.
-      </p>
-    ),
-  },
-  {
-    title: "9. Limitation of Liability",
+    title: "7. Fees",
     content: (
       <>
-        <p>Pavocard is not liable for:</p>
+        <p>Where applicable, Pavocard may charge transaction or service fees.</p>
+        <p className="mt-2">
+          Any applicable fees will be disclosed before the completion of your
+          transaction.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "8. Prohibited Activities",
+    content: (
+      <>
+        <p>You agree not to:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Submit stolen, counterfeit, unauthorized, or previously redeemed gift cards</li>
+          <li>Use Pavocard for money laundering, fraud, terrorism financing, or other illegal activities</li>
+          <li>Attempt to manipulate exchange rates</li>
+          <li>Use automated bots or unauthorized software</li>
+          <li>Interfere with the operation or security of the platform</li>
+          <li>Create multiple accounts to abuse promotions or evade restrictions</li>
+          <li>Provide false or misleading information</li>
+        </ul>
+        <p className="mt-2">Violation of these Terms may result in:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Immediate account suspension</li>
+          <li>Permanent account termination</li>
+          <li>Cancellation of pending transactions</li>
+          <li>Reporting to law enforcement where required</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "9. Refund Policy",
+    content: (
+      <>
+        <p>Due to the nature of digital gift card transactions:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Successfully completed transactions are final and non-refundable</li>
+          <li>Refunds will not be provided for verified and completed gift card sales</li>
+          <li>
+            If a transaction fails because of an error caused by Pavocard, we
+            will investigate and take appropriate corrective action
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "10. Intellectual Property",
+    content: (
+      <>
+        <p>
+          All content available through Pavocard, including but not limited
+          to:
+        </p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Logos</li>
+          <li>Designs</li>
+          <li>Text</li>
+          <li>Graphics</li>
+          <li>Software</li>
+          <li>Trademarks</li>
+        </ul>
+        <p className="mt-2">remains the property of Pavocard or its licensors.</p>
+        <p className="mt-2">
+          You may not reproduce, modify, distribute, or use any part of our
+          intellectual property without prior written permission.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "11. Privacy",
+    content: (
+      <>
+        <p>
+          Your use of our Services is also governed by our Privacy Policy,
+          which explains how we collect, process, store, and protect your
+          personal information.
+        </p>
+        <p className="mt-2">
+          By using Pavocard, you agree to our Privacy Policy.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "12. Limitation of Liability",
+    content: (
+      <>
+        <p>To the maximum extent permitted by law, Pavocard shall not be liable for:</p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>Losses resulting from incorrect information provided by users</li>
-          <li>Delays or failures caused by third-party services</li>
-          <li>Unauthorized access due to user negligence</li>
+          <li>Delayed or failed payments caused by banks or third-party providers</li>
+          <li>Temporary service interruptions</li>
+          <li>Internet or network failures</li>
+          <li>Unauthorized access resulting from user negligence</li>
+          <li>Indirect, incidental, consequential, or special damages</li>
         </ul>
-        <p className="mt-2">Use of the platform is at your own risk.</p>
+        <p className="mt-2">Use of the Services is at your own risk.</p>
       </>
     ),
   },
   {
-    title: "10. Account Termination",
+    title: "13. Indemnification",
     content: (
       <>
-        <p>We reserve the right to:</p>
+        <p>
+          You agree to indemnify and hold harmless Pavocard, its directors,
+          employees, affiliates, and partners from any claims, damages,
+          losses, liabilities, or expenses arising from:
+        </p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Suspend or terminate accounts at our discretion</li>
-          <li>Restrict access if users violate these terms</li>
+          <li>Your misuse of the Services</li>
+          <li>Your violation of these Terms</li>
+          <li>Your violation of applicable laws</li>
+          <li>Your infringement of the rights of another person</li>
         </ul>
       </>
     ),
   },
   {
-    title: "11. Changes to Terms",
+    title: "14. Suspension and Account Termination",
     content: (
-      <p>
-        We may update these Terms &amp; Conditions at any time. Continued use
-        of the platform means you accept the updated terms.
-      </p>
+      <>
+        <p>We reserve the right to suspend, restrict, or permanently terminate your account if you:</p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Violate these Terms</li>
+          <li>Engage in fraudulent or illegal activity</li>
+          <li>Provide false information</li>
+          <li>Attempt to compromise the security of our platform</li>
+          <li>Abuse our Services</li>
+        </ul>
+        <p className="mt-2">
+          Termination may occur without prior notice where necessary to
+          protect Pavocard or other users.
+        </p>
+      </>
     ),
   },
   {
-    title: "12. Contact Information",
+    title: "15. Service Availability",
     content: (
       <>
-        <p>If you have any questions about these Terms:</p>
+        <p>
+          While we strive to provide uninterrupted Services, we do not
+          guarantee that the platform will always be available.
+        </p>
+        <p className="mt-2">
+          Maintenance, technical issues, or circumstances beyond our control
+          may temporarily interrupt the Services.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "16. Changes to These Terms",
+    content: (
+      <>
+        <p>We may revise these Terms from time to time.</p>
+        <p className="mt-2">
+          Updated versions will be posted on our website and/or mobile
+          application with a revised Effective Date.
+        </p>
+        <p className="mt-2">
+          Your continued use of Pavocard after changes become effective
+          constitutes your acceptance of the revised Terms.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "17. Governing Law",
+    content: (
+      <>
+        <p>
+          These Terms shall be governed by and interpreted in accordance
+          with the laws of the Federal Republic of Nigeria, without regard
+          to conflict of law principles.
+        </p>
+        <p className="mt-2">
+          Any disputes arising from these Terms or your use of the Services
+          shall be subject to the jurisdiction of the competent courts of
+          Nigeria, unless otherwise required by applicable law.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "18. Contact Us",
+    content: (
+      <>
+        <p>
+          If you have any questions regarding these Terms &amp; Conditions,
+          please contact us:
+        </p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>Email: support@pavocard.com</li>
-          <li>Nigeria: +(234) 706-606-7435</li>
+          <li>Nigeria: +234 706 606 7435</li>
           <li>Ghana: +(233) 013-234-4534</li>
         </ul>
       </>
@@ -177,6 +337,9 @@ export default function TermsContent() {
   return (
     <section className="w-full bg-white pb-[80px] md:pb-[120px]">
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-[10px]">
+        <p className="text-[rgba(0,0,0,0.5)] text-[16px] md:text-[18px] font-sans mb-2">
+          Effective Date: July 17, 2026
+        </p>
         {SECTIONS.map((section, idx) => (
           <div
             key={idx}
